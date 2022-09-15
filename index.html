@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
+
+    <title>My To Do List</title>
+  </head>
+  <body>
+    <div class="container p-5">
+      <h2
+        class="app-title"
+        id="header"
+        style="
+          text-align: center;
+          background-color: blueviolet;
+          color: white;
+          padding: 7px;
+        "
+      >
+        My To Do App
+      </h2>
+      <div class="card">
+        <div
+          class="card-header text-center"
+          style="background-color: blueviolet; color: white; font-weight: bold"
+        >
+          New Task
+        </div>
+        <div class="card-body">
+          <form id="addTaskForm">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                name="taskName"
+                id="txtTaskName"
+                class="form-control"
+                placeholder="Type a new task"
+                aria-describedby="btnAdd NewTask"
+                value=""
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  id="btnAddNewTask"
+                >
+                  <i class="fas fa-check-double"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="card-header text-center mt-3 p-2"
+        style="background-color: blueviolet; color: white; font-weight: bold"
+      >
+        List
+      </div>
+      <div class="card-header">
+        <input
+          type="radio"
+          class="btn-check"
+          name="options-outlined"
+          id="danger-outlined"
+          autocomplete="off"
+          checked
+        />
+        <label
+          class="btn btn-outline-danger col-12 text-end"
+          for="danger-outlined"
+          >Delete All
+        </label>
+      </div>
+
+      <ul class="list-group mt-3" style="list-style: none" id="task-list">
+       
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
